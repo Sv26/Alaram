@@ -1,0 +1,159 @@
+* {
+  padding: 10;
+  margin: center;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #27a3ac;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.wrapper {
+  background-color: #c7acc2;
+  width: 90%;
+  max-width: 31.25em;
+  padding: 3.12em 5em;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.1);
+}
+
+.timer-display {
+  font-size: 2.18em;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  color: #1f1f20;
+  margin-bottom: 1em;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.inputs input {
+  width: 2.8em;
+  font-size: 1.3em;
+  border: 1px solid #000000;
+  border-radius: 0.3em;
+  padding: 0.4em 0.2em;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.inputs input:focus {
+  outline: none;
+  border-color: #377dff;
+}
+
+#set {
+  background-color: #4f84e7;
+  border: none;
+  padding: 0.9em 1.8em;
+  display: block;
+  margin: 1.5em auto 0 auto;
+  border-radius: 2em;
+  color: #b31e1e;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#set:hover {
+  background-color: #2d68c4;
+}
+
+.alarm {
+  display: grid;
+  grid-template-columns: 8fr 2fr 2fr;
+  gap: 1em;
+  margin-top: 1.5em;
+  align-items: center;
+  border-bottom: 1px solid #898f9b;
+  padding-bottom: 0.6em;
+}
+
+.alarm input[type="checkbox"] {
+  appearance: none;
+  height: 2em;
+  width: 3.75em;
+  background-color: #4e4e5c;
+  border-radius: 1.25em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.alarm input[type="checkbox"]:before {
+  position: absolute;
+  content: "";
+  background-color: #757683;
+  height: 1.43em;
+  width: 1.43em;
+  border-radius: 50%;
+  top: 0.25em;
+  left: 0.25em;
+  transition: background-color 0.3s ease;
+}
+
+.alarm input[type="checkbox"]:checked {
+  background-color: #494e57;
+}
+
+.alarm input[type="checkbox"]:checked:before {
+  background-color: #377dff;
+  left: 2em;
+}
+
+.deleteButton {
+  background-color: transparent;
+  font-size: 1.5em;
+  color: #377dff;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.deleteButton:hover {
+  color: #b61717;
+}
+
+/* Time-specific colors */
+.day {
+  background-color: #8b7575;
+  color: #283755;
+}
+
+.night {
+  background-color: #c42e2e;
+  color: #642323;
+}
+
+.sunset {
+  background-color: #ff9f1a;
+  color: #ffffff;
+}
+
+.dawn {
+  background-color: #ffdc8c;
+  color: #1a1a1a;
+}
